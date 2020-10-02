@@ -21,9 +21,10 @@ const images = [
 ];
 const galleryEl = document.querySelector("#gallery");
 
-const makeStr = ({ url, alt }) => {
-  return `<li class="gallery-item"><img class="gallery-img" src=${url} alt=${alt}></li>`;
-};
-
-const createGallery = images.map(makeStr);
-galleryEl.insertAdjacentHTML("afterbegin", createGallery);
+galleryEl.insertAdjacentHTML(
+  "afterbegin",
+  images.reduce((acc, { url, alt }) => {
+    acc += `<li class="gallery-item"><img class="gallery-img" src=${url} alt=${alt}></li>`;
+    return acc;
+  }, "")
+);

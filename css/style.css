@@ -1,3 +1,4 @@
+/* task 3 */
 #gallery {
   padding: 20px;
   text-align: center;
@@ -5,9 +6,23 @@
 
 img {
   width: 500px;
-  height: 200px;
+  height: 300px;
+  margin-bottom: 50px;
 }
 
 img:hover {
   transform: rotate(20deg);
+}
+
+/* task 6 */
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
 }
