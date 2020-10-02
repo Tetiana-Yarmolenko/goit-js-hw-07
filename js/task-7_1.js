@@ -13,7 +13,6 @@ const categories = document.querySelector("#categories");
 console.log(`Всписке ${categories.children.length} категории`);
 
 const itemEl = document.querySelectorAll(".item");
-console.log(itemEl);
 
 itemEl.forEach((el) => {
   console.log(`Категория: ${el.querySelector("h2").textContent}`);
