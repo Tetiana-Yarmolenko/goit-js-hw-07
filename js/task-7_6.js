@@ -10,7 +10,8 @@
 // Если введено подходящее количество, то border инпута становится зеленым, если неправильное - красным.
 
 const inputEl = document.querySelector(`#validation-input`);
-const validNumber = Number(inputEl.getAttribute("data-length"));
+const validNumber = Number(inputEl.dataset.length);
+// const validNumber = Number(inputEl.getAttribute("data-length"));
 
 const onInputSymbols = () =>
   inputEl.value.length === validNumber
