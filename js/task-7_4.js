@@ -8,11 +8,12 @@ const incrementEl = document.querySelector('[data-action="increment"]');
 const decrementEl = document.querySelector('[data-action="decrement"]');
 
 const counterValue = document.querySelector("#value");
-let value = 0;
-counterValue.textContent = value;
 
-const increment = () => (counterValue.textContent = value += 1);
-const decrement = () => (counterValue.textContent = value -= 1);
+decrementEl.addEventListener("click", () => --counterValue.textContent);
+incrementEl.addEventListener("click", () => ++counterValue.textContent);
 
-decrementEl.addEventListener("click", decrement);
-incrementEl.addEventListener("click", increment);
+// let value = 0;
+// counterValue.textContent = value;
+
+// const increment = () => (counterValue.textContent = value += 1);
+// const decrement = () => (counterValue.textContent = value -= 1);
